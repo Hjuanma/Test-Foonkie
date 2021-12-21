@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:views="clr-namespace:Test_Foonkie.Views"
+             x:Class="Test_Foonkie.Views.FisrtLayoutView">
+  <ContentView.Content>
+      <StackLayout Style="{StaticResource FirstLayout}" Padding="31, 50, 31, 0" Margin="0, 0, 0, 158">
+
+         <Image Source="FoonkieMonkeyLogo" VerticalOptions="Start" HorizontalOptions="Center" HeightRequest="55"
+                WidthRequest="101"/>
+         
+         <BoxView Color="Black" HeightRequest=".5" WidthRequest="57" Margin="0,23,0,7" VerticalOptions="Fill" HorizontalOptions="Center"/>
+         <Label Style="{StaticResource Title}" Text="Expert Samurais on Develop Secure apps with Sensitive data."/>
+         <Label Style="{StaticResource SubTitle}" Margin="24, 14, 24, 22" Text="We are samurais code monkeys that masters the most recent data security protocols, encrypted methodologies and Blockchain development."/>
+         <views:CustomButtonView  VerticalOptions="Fill" HorizontalOptions="Center" Text="Get in Touch!"/>
+
+         <Image Source="FoonkieWebsiteMonkey1" Margin="0, 10, 0, 0" HeightRequest="476" WidthRequest="257"/>
+      </StackLayout>
+  </ContentView.Content>
+</ContentView>

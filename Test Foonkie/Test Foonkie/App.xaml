@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test_Foonkie.App">
+    <Application.Resources>
+      <ResourceDictionary >
+         <Style TargetType="ScrollView">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+         </Style>
+         <Style TargetType="StackLayout" x:Key="FirstLayout">
+            <Setter Property="BackgroundColor" Value="#B3DDD8"/>
+            <Setter Property="HeightRequest" Value="695"/>
+         </Style>
+         <Style TargetType="StackLayout" x:Key="SecondLayout">
+            <Setter Property="BackgroundColor" Value="#AAAACC"/>
+            <Setter Property="HeightRequest" Value="880"/>
+
+         </Style>
+         <Style TargetType="AbsoluteLayout" x:Key="ThirdLayout">
+            <Setter Property="BackgroundColor" Value="#29ABE1"/>
+            <Setter Property="HeightRequest" Value="674"/>
+
+         </Style>
+
+         <Style TargetType="Label" x:Key="BaseLable">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalTextAlignment"  Value="Center"/>
+         </Style>
+
+         <Style TargetType="Label" x:Key="Title" BasedOn="{StaticResource BaseLable}">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontFamily" Value="DMSerifRegular"/>
+         </Style>
+
+         <Style TargetType="Label" x:Key="SubTitle" BasedOn="{StaticResource BaseLable}">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Rubik"/>
+         </Style>
+
+         <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="TextColor" Value="#29ABE1"/>
+            <Setter Property="VerticalOptions" Value="Fill"/>
+            <Setter Property="FontFamily" Value="DMSerifRegular"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+         </Style>
+      </ResourceDictionary>
+    </Application.Resources>
+</Application>

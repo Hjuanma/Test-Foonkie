@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:views="clr-namespace:Test_Foonkie.Views"
+             x:Class="Test_Foonkie.Views.ThirdLayoutView">
+   <ContentView.Content>
+      <AbsoluteLayout Style="{StaticResource ThirdLayout}">
+
+         <Image Source="FoonkieWebsiteMonkey3" AbsoluteLayout.LayoutBounds="-50, -50, 329, 352"/>
+         <StackLayout Padding="0, 90, 30, 0" AbsoluteLayout.LayoutBounds="1, 0, 0.51, 1" AbsoluteLayout.LayoutFlags="All">
+            <Label Style="{StaticResource Title}" HorizontalOptions="End" Text="Let's work together!" TextColor="White" Margin="0,0,-40,0" FontSize="24"/>
+            <views:CustomButtonView  VerticalOptions="Fill" HorizontalOptions="End" Text="Get in Touch!" Margin="0, 44, 0, 0"/>
+            <BoxView Color="White" HeightRequest=".5" WidthRequest="53" Margin="0,54,0,0" VerticalOptions="Fill" HorizontalOptions="End"/>
+
+            <Image Source="FoonkieMonkeyLogo" VerticalOptions="Start" HorizontalOptions="End" HeightRequest="66" Margin="0,22"
+                WidthRequest="124"/>
+
+            <Label Style="{StaticResource SubTitle}" Text="Bogotá:"  TextColor="White" FontAttributes="Bold" FontSize="15"  HorizontalOptions="End"/>
+            <Label Style="{StaticResource SubTitle}" Text="Calle 106 # 54-15 of. 307/308"  TextColor="White"  HorizontalOptions="End"/>
+
+            <Label Style="{StaticResource SubTitle}" Text="Harpenden, UK:" Margin="0,10,0,0"  TextColor="White" FontAttributes="Bold" FontSize="15"  HorizontalOptions="End"/>
+            <Label Style="{StaticResource SubTitle}" Text="Harpenden Hall, Southdown Rd"  TextColor="White"   HorizontalOptions="End"/>
+
+            <Label Style="{StaticResource SubTitle}" Text="Miami, USA:" Margin="0,10,0,0"  TextColor="White" FontAttributes="Bold" FontSize="15"  HorizontalOptions="End"/>
+            <Label Style="{StaticResource SubTitle}" Text="990 Biscayne Blvd #501"  TextColor="White"   HorizontalOptions="End"/>
+
+            <BoxView Color="White" HeightRequest=".5" WidthRequest="53" Margin="0,30,0,0" VerticalOptions="Fill" HorizontalOptions="End"/>
+            <Label Style="{StaticResource SubTitle}" Text="Foonkie Monkey 2021" Margin="0,10,0,0"  TextColor="White" FontAttributes="Bold" FontSize="15"  HorizontalOptions="End"/>
+
+         </StackLayout>
+      </AbsoluteLayout>
+   </ContentView.Content>
+</ContentView>

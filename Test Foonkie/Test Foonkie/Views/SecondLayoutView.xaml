@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:Test_Foonkie.Views"
+             x:Class="Test_Foonkie.Views.SecondLayoutView">
+  <ContentView.Content>
+      <StackLayout Style="{StaticResource SecondLayout}" Margin="0, -158, 0, 0" Padding="53,0">
+
+         <Label Style="{StaticResource Title}" Text="Case studies" HorizontalOptions="Start" Margin="0, 115, 0, 0" FontSize="18" TextColor="White"/>
+         <BoxView Color="White" HeightRequest=".5" WidthRequest="50" Margin="0,5,0,7" VerticalOptions="Fill" HorizontalOptions="Start"/>
+         <views:ItemView Margin="-30,0"/>
+         
+         <Grid ColumnDefinitions="*,*,2*,*"  RowDefinitions="1, Auto" Margin="-23,25" ColumnSpacing="0" RowSpacing="0">
+
+            <BoxView Color="Black" HorizontalOptions="Fill"/>
+            <Label Grid.Row="1" Grid.Column="0" VerticalOptions="Start" Style="{StaticResource Title}" Text="Pfizer" FontSize="15" />
+            <Label Grid.Row="1" Grid.Column="1" VerticalOptions="Start" Style="{StaticResource Title}" Text="Takeda" FontSize="15"/>
+            <Label Grid.Row="1" Grid.Column="2" VerticalOptions="Start" Style="{StaticResource Title}" Text="Boston Scientfic Group" FontSize="15"/>
+            <Label Grid.Row="1" Grid.Column="3" VerticalOptions="Start" Style="{StaticResource Title}" Text="BSJI" FontSize="15  "/>
+
+         </Grid>
+
+      </StackLayout>
+  </ContentView.Content>
+</ContentView>

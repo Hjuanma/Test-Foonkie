@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:views="clr-namespace:Test_Foonkie.Views"
+             x:Class="Test_Foonkie.Views.ItemView">
+  <ContentView.Content>
+
+      <Grid ColumnDefinitions="*, 270, *" HorizontalOptions="FillAndExpand">
+
+         <pancakeview:PancakeView CornerRadius="17" BackgroundColor="#E6E3EF" HorizontalOptions="Center" Grid.Column="1">
+            <pancakeview:PancakeView.Shadow>
+               <pancakeview:DropShadow Color="#000000" Offset="10,10" Opacity="0.5" />
+            </pancakeview:PancakeView.Shadow>
+
+            <Grid RowDefinitions="*, *">
+
+               <pancakeview:PancakeView CornerRadius="17" BackgroundColor="White">
+                  <Image Source="pfizermotion"/>
+               </pancakeview:PancakeView>
+
+               <StackLayout Grid.Row="1">
+                  <Label Style="{StaticResource Title}" Text="Digital Platform for Pfizer" HorizontalTextAlignment="Start" Margin="20,0"/>
+                  <BoxView Color="Black" HeightRequest=".5" WidthRequest="57" Margin="20,14" VerticalOptions="Fill" HorizontalOptions="Start"/>
+                  <Label Style="{StaticResource SubTitle}" FontSize="10"  Margin="20,0" HorizontalTextAlignment="Start" Text="Give the Hability to the content administrator to create, edit, and delete the desired commercial content in a technological solution, and allow the users to download and work online or offline with the content, were the two main challenges we had."/>
+                  <views:CustomButtonView Margin="20" Text="View Project" HorizontalOptions="Start"/>
+               </StackLayout>
+            </Grid>
+         </pancakeview:PancakeView>
+
+
+         <Frame Grid.Column="0" Rotation="180" VerticalOptions="Center" BackgroundColor="White" CornerRadius="25" HeightRequest="20" Padding="5">
+            <Image Source="Stroke"/>
+         </Frame>
+         <Frame Grid.Column="2" VerticalOptions="Center" BackgroundColor="White" CornerRadius="25" HeightRequest="20" Padding="5">
+            <Image Source="Stroke"/>
+         </Frame>
+      </Grid>
+
+  </ContentView.Content>
+</ContentView>
