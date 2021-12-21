@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:extensions="http://xamarin.com/schemas/2020/toolkit" xmlns:views="clr-namespace:Test_Foonkie.Views"
+             x:Class="Test_Foonkie.Views.ExpanderMenuView">
+  <ContentView.Content>
+      <pancakeview:PancakeView Margin="30" CornerRadius="40" Padding="5">
+         <pancakeview:PancakeView.BackgroundGradientStops>
+            <pancakeview:GradientStop Color="#B3DDD8" Offset="0"/>
+            <pancakeview:GradientStop Color="#29ABE1" Offset="1"/>
+         </pancakeview:PancakeView.BackgroundGradientStops>
+
+         <extensions:Expander HorizontalOptions="Center" Rotation="180" VerticalOptions="End">
+            <extensions:Expander.Header>
+               <Image Source="MenuIcon" WidthRequest="30" HeightRequest="30" Rotation="180" >
+                  <Image.Triggers>
+                     <DataTrigger TargetType="Image" 
+                                  Binding="{Binding Source={RelativeSource AncestorType={x:Type extensions:Expander}}, Path=IsExpanded}"
+                                  Value="True">
+                        <Setter Property="Source" Value="CloseIcon"/>
+
+                     </DataTrigger>
+                  </Image.Triggers>
+               </Image>
+            </extensions:Expander.Header>
+
+            <StackLayout Spacing="30" Margin="0,20">
+               <ImageButton Source="AddIcon" WidthRequest="30" HeightRequest="30" BackgroundColor="Transparent" Rotation="180" Clicked="AddIconClicked"/>
+               <ImageButton Source="HomeIcon" WidthRequest="30" HeightRequest="30" BackgroundColor="Transparent" Rotation="180" Clicked="HomeIconClicked"/>
+               
+            </StackLayout>
+            
+         </extensions:Expander>
+      </pancakeview:PancakeView>
+  </ContentView.Content>
+</ContentView>

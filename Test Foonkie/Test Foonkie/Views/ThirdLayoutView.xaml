@@ -2,6 +2,7 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:views="clr-namespace:Test_Foonkie.Views"
+             xmlns:locals="clr-namespace:Test_Foonkie.ViewModel"
              x:Class="Test_Foonkie.Views.ThirdLayoutView">
    <ContentView.Content>
       <AbsoluteLayout Style="{StaticResource ThirdLayout}">
@@ -9,7 +10,8 @@
          <Image Source="FoonkieWebsiteMonkey3" AbsoluteLayout.LayoutBounds="-50, -50, 329, 352"/>
          <StackLayout Padding="0, 90, 30, 0" AbsoluteLayout.LayoutBounds="1, 0, 0.51, 1" AbsoluteLayout.LayoutFlags="All">
             <Label Style="{StaticResource Title}" HorizontalOptions="End" Text="Let's work together!" TextColor="White" Margin="0,0,-40,0" FontSize="24"/>
-            <views:CustomButtonView  VerticalOptions="Fill" HorizontalOptions="End" Text="Get in Touch!" Margin="0, 44, 0, 0"/>
+            <views:CustomButtonView x:Name="CusomButton"  VerticalOptions="Fill" HorizontalOptions="End" Text="Get in Touch!" Margin="0, 44, 0, 0"
+                                 ButtonComand="{Binding Source={RelativeSource AncestorType={x:Type locals:MainViewModel}}, Path=GoToMailCommand}"/>
             <BoxView Color="White" HeightRequest=".5" WidthRequest="53" Margin="0,54,0,0" VerticalOptions="Fill" HorizontalOptions="End"/>
 
             <Image Source="FoonkieMonkeyLogo" VerticalOptions="Start" HorizontalOptions="End" HeightRequest="66" Margin="0,22"

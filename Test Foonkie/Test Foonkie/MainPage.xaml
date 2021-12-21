@@ -12,6 +12,7 @@
             <views:ThirdLayoutView Grid.Row="3"/>
          </Grid>
       </ScrollView>
+      <views:ExpanderMenuView HorizontalOptions="End" VerticalOptions="End"/>
    </Grid>
 
 </ContentPage>

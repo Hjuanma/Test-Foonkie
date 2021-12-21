@@ -9,7 +9,6 @@ namespace Test_Foonkie
       public App()
       {
          InitializeComponent();
-
          MainPage = new MainPage();
       }
 

@@ -19,7 +19,7 @@
          </Style>
          <Style TargetType="AbsoluteLayout" x:Key="ThirdLayout">
             <Setter Property="BackgroundColor" Value="#29ABE1"/>
-            <Setter Property="HeightRequest" Value="674"/>
+            <Setter Property="HeightRequest" Value="730"/>
 
          </Style>
 
