@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:views="clr-namespace:Test_Foonkie.Views"
+             x:Class="Test_Foonkie.Views.UserDetailPage"
+             BackgroundColor="White">
+   <ContentPage.Resources>
+      <ResourceDictionary>
+         <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+         </Style>
+      </ResourceDictionary>
+   </ContentPage.Resources>
+   <ContentPage.Content>
+      <StackLayout Padding="20">
+         <Image x:Name="Avatar"
+                Source="{Binding Avatar}"
+                Aspect="AspectFit"
+                HeightRequest="200"
+                WidthRequest="200" />
+         <Label x:Name="FirstName"
+                Text="{Binding FirstName}"
+                FontAttributes="Bold" />
+         <Label x:Name="LastName"
+                Text="{Binding LastName}"
+                FontAttributes="Bold" />
+         <Label
+                Text="{Binding Email}"
+            x:Name="Email"
+            FontAttributes="Italic"
+            VerticalOptions="End" />
+      </StackLayout>
+   </ContentPage.Content>
+</ContentPage>

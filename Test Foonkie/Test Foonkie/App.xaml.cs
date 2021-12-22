@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MonkeyCache.FileStore;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,7 +10,8 @@ namespace Test_Foonkie
       public App()
       {
          InitializeComponent();
-         MainPage = new MainPage();
+         Barrel.ApplicationId = "FoonkieCache";
+         MainPage = new NavigationPage(new MainPage());
       }
 
       protected override void OnStart()

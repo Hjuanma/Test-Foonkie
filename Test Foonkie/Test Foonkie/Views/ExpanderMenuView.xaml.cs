@@ -17,15 +17,19 @@ namespace Test_Foonkie.Views
          InitializeComponent();
       }
 
-      private void AddIconClicked(object sender, EventArgs e)
+      private async void AddIconClicked(object sender, EventArgs e)
       {
 
+         if (!(App.Current.MainPage.Navigation.NavigationStack.LastOrDefault() is UsersPage))
+         {
+            await Navigation.PushAsync(new UsersPage());
+         }
       }
-      private void HomeIconClicked(object sender, EventArgs e)
+      private async void HomeIconClicked(object sender, EventArgs e)
       {
          if(!(App.Current.MainPage.Navigation.NavigationStack.LastOrDefault() is MainPage))
          {
-            App.Current.MainPage.Navigation.PopToRootAsync();
+            await App.Current.MainPage.Navigation.PopToRootAsync();
          }
       }
 
